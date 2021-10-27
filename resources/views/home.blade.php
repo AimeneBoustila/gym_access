@@ -144,7 +144,7 @@
                                     <div class="small-box bg-danger">
                                       <div class="inner">
                                       <img src="{{asset('img/icons/staff-member.png')}}"/>
-                                        <h3>{{$ouvertures ?? '' }}</h3>
+                                        <h3>30</h3>
                                         <p>
                                             Ouvertures Manuelle
                                         </p>

@@ -27,9 +27,8 @@ class HomeController extends Controller
         $count_presences = count($presences);
         $inscriptions = Inscription::where('created_at', Carbon::today())->get();
         $membres = Membre::whereDate('created_at', Carbon::today())->get();
-        $ouvertures = Ouverture::whereDate('created_at', Carbon::today())->get()->count();
-        $libres = Presence::where('type',1)->get();
-              
+//        $ouvertures = Ouverture::whereDate('created_at', Carbon::today())->get()->count();
+        $libres = Presence::where('type',1)->get();              
         return view('home',compact('presences','membres','inscrit','presences','count_presences','inscriptions','ouvertures','libres'));    
     }
 
@@ -91,7 +90,7 @@ class HomeController extends Controller
         $count_presences = count($presences);
         $inscriptions = Inscription::where('created_at', Carbon::today())->get();
         $membres = Membre::whereDate('created_at', Carbon::today())->get();
-        $ouvertures = Ouverture::whereDate('created_at', Carbon::today())->get()->count();
+//        $ouvertures = Ouverture::whereDate('created_at', Carbon::today())->get()->count();
         $libres = Presence::where('type',1)->get();
         $countLibre = count($libres);
         $benefice = Inscription::all()->sum('total');
